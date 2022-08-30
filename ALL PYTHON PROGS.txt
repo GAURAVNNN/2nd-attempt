@@ -1,0 +1,597 @@
+import random
+import string
+    
+choice=""
+
+
+
+while choice=="y" or choice=="yes":
+      print(random.randint(1,6))
+      choice=input("yes or no")
+
+print ("thx")
+ 
+for i in range(100):
+    if i%9==0:
+      print(i)
+else:pass
+
+
+
+import random
+a = 1
+b = 6
+
+play_again = "yes"
+
+while (play_again not in "yes") or (play_again not in "y"):
+    print ("Rolling the dices...")
+    print ("The values are....")
+    print (random.randint(a, b))
+
+    play_again = input("Roll the dices again?")
+
+______________________________________________________________________
+import random
+import string
+"""
+pas=""
+while pas!="python":
+     pas=input('Enter Password')
+     
+
+print('thx')
+
+for i in range(4):
+  for j in range(4):
+    print('(',i,j,')',end=' ')
+  print()
+"""
+
+lno=int(input("enter no of letter"))
+nno=int(input("enter no of numbers"))
+spno=int(input("enter no of special characters "))
+
+
+letters=list(string.ascii_letters)
+digits=list(string.digits)
+spchar=list(string.punctuation)
+allchar=list(string.ascii_letters+string.digits+string.punctuation)
+
+length=int(input("length of password"))
+
+
+
+         
+import string
+import random
+
+alphabets = list(string.ascii_letters)
+digits = list(string.digits)
+special_characters = list(string.punctuation)
+characters = list(string.ascii_letters + string.digits + string.punctuation)
+
+length = int(input("Enter password length: "))
+
+alphabets_count = int(input("Enter alphabets count in password: "))
+digits_count = int(input("Enter digits count in password: "))
+special_characters_count = int(input("Enter special characters count in password: "))
+
+characters_count = alphabets_count + digits_count + special_characters_count
+
+if characters_count > length:
+    print("Characters total count is greater than the password length")
+else:
+    password = []
+
+    for i in range(alphabets_count):
+        password.append(random.choice(alphabets))
+
+    for i in range(digits_count):
+        password.append(random.choice(digits))
+
+    for i in range(special_characters_count):
+        password.append(random.choice(special_characters))
+
+    if characters_count < length:
+        random.shuffle(characters)
+        for i in range(length - characters_count):
+            password.append(random.choice(characters))
+
+    random.shuffle(password)
+
+    print("".join(password))
+
+__________________________________________________________________________________
+from functools import *
+from random import*
+import random
+import string
+import datetime
+import time
+import math
+"""
+    def hello(name):
+       print("morning ",name)
+
+
+    hello("man")
+
+
+         
+    def sqr(no):
+        print("square of number is",no*no)
+        
+        if no%2==0:
+           print("even")
+        else:
+            print('odd')
+
+
+
+
+
+
+
+    def sum1(a,b):
+        
+        return a+b,a-b,a/b,a*b
+
+    t=sum1(20,10)
+
+    print(t)
+
+
+    def sum2(*n):
+        su=0
+        for i in n:
+              su=su+i
+        print(su)         
+
+
+    sum2(10,20,30,40,5,6,6,4,4,5,6,8,9,99,8,8,7,76,6,66,66666,4,4,3,3,3,435,272,76,72677)
+
+    list1=[]
+    for i in range(10):
+        a=int(input("enter no"))
+        list1.append(a)
+
+
+    tup=tuple(list1)
+    print(tup)
+    sum2(tup)
+
+
+    result=1
+    def fac(n):
+        if n==0:
+          result=1
+          print (result)
+        else:
+          result=n*fac(n-1)
+          print(result)
+        return result
+
+
+    print(fac(5))
+
+    
+
+
+j=lambda s :print("rushil is a ",s)
+j("10/100")
+
+j=10
+l=(2,4,56,78,142,65,76,597,45,24,654,8985,1)
+l1=tuple(filter(lambda x:x%2==0,l))
+print(l1)
+
+
+
+l2=list(map(lambda x:x*10,l))
+print(l2)
+
+   
+
+l3=reduce(lambda x ,y:x**y,l)
+print(l3)
+
+"""
+
+let=string.ascii_uppercase
+
+def fun1():
+    for i in range(26):
+     yield(let[i])
+  
+
+g=fun1()
+type(g) 
+
+a=int(input("enter no"))
+"""
+def countdown(num):
+ print("start count donw")
+ while(num>0):
+  yield num
+  num-=1
+"""
+def countdown(num):
+ print("start count donw")
+ for i in range(num,-1,-1
+                ):
+  yield i
+  
+
+
+cd=countdown(a)
+for i in cd:
+    time.sleep(0.5)
+    print(i)
+
+for i in range(26):
+    
+ print(next(g),end=" ")
+
+
+
+ 
+
+___________________________________________________________________________
+
+
+from random import*
+import random
+import string
+import datetime
+import time
+import math
+'''
+print(random.randrange(0,10))
+a=random.randrange(0,10)
+b=random.randrange(0,10)
+c=random.randrange(0,10)
+d=random.randrange(0,10)
+
+otp=[a,b,c,d]
+print(otp)
+print(random.randrange(0,10),random.randrange(0,10),random.randrange(0,10),random.randrange(0,10))
+
+
+print(random.random())
+char=string.ascii_uppercase
+jn=''.join(random.choice(char)for i in range(4))
+print(jn)
+
+
+
+letlw=string.ascii_lowercase
+letup=string.ascii_uppercasex`
+digits=string.digits
+spchar=string.punctuation
+
+'''
+x=1
+while True:
+    a=30
+    pasw=string.ascii_letters+string.digits+string.punctuation    
+    p=''.join(random.choice(pasw)for i in range(8))
+    print(p)
+    print(datetime.datetime.now())
+
+
+    for i in range(30):
+        time.sleep(1)
+        print(a)
+        a=a-1
+
+
+
+___________________________________________________________________________
+vowels=['a','e','i','u','o']
+word=input()
+a=[]
+
+for i in word:
+    if i in vowels:
+        a.append(i)
+        
+    elif i in a:
+     continue
+    
+    
+        
+
+print(word)
+print(a)        
+
+
+a="python"
+a.replace("o","z")
+print(a)
+________________________________________________________
+
+'''
+name=input("enter name ")
+if name=="python":
+   print("hello python")
+elif name=="java":
+    print("hello java")
+elif name=="java":
+        print("fall through")
+else :
+   print("welcome")
+
+
+no=int(input("enter a number"))
+
+if (no>0 and  no<101):
+ print("between 1 and 100")
+elif no > 100:
+ print("greater than 100")
+
+
+count=0
+a="python"
+for b in a:
+ print(count ," - ",b)
+ count+=1
+
+r= range(20,-10,-1)
+for i in r:
+     print(i)
+     
+for x in range(11):
+  if x%2==0:
+    print(x)
+
+    
+x=int(input("enter no"))
+
+
+for i in range(x+1):
+ print ('*'*i)
+'''
+
+col=int(input("enter no of columns"))
+
+for i in range(1,col+1):
+ print(" "*(col-i),end='')
+ print("* "*i) 
+
+
+    
+________________________________________________________
+"""
+class student:
+    ''' will acquire name'''
+    staticvb="GWH"
+    def __init__(self,name,year):
+        self.name=name
+        self.year=year
+        print("the name of the student is")
+    def display(self):
+        print(self.name)
+        print(self.year)
+        
+
+name=input()
+yr=input()
+obj=student(name,yr)
+obj.newvb=10
+print(obj.__dict__)
+obj.display()
+
+"""
+class parent:
+ leg=10
+ 
+ def __bird(walk,name):
+        
+        print(name, walk.leg)
+        
+ def call(self):
+   print(self.__bird("hen"))
+        
+obj=parent()
+obj.call() 
+
+print(parent.leg)
+_______________________________________________________________
+"""
+class parent:
+ leg=2
+ @classmethod
+ def bird(walk,name):
+       print("parent")
+       print(name, walk.leg)
+
+class child(parent):
+
+    def m2(self):
+     print("child ")
+     
+class child2(parent)
+    def m22(self)
+    print("sibling")
+    
+obj.
+class gchild(child):
+
+    def m1(self):
+
+     print('print m 1')
+
+obj=gchild()
+obj.bird("hen")
+obj.m2()
+obj.m1()
+
+
+
+
+
+class parent:
+ leg=2
+ @classmethod
+ def bird(walk,name):
+       print("parent")
+       print(name, walk.leg)
+
+class child(parent):
+
+    def m2(self):
+     print("child ")
+     
+class child2(parent):
+    def m22(self):
+     print("sibling")
+    
+
+obj=child()
+obj.bird('cat')
+obj.m2()
+obj1=child2()
+obj1.m22()
+
+
+        
+
+class a:pass
+class b(a):pass
+class c(a):pass
+class d(b,c):pass
+
+
+print(a.mro())
+print(b.mro())
+print(c.mro())
+print(d.mro())
+
+"""
+
+class a:pass
+class b():pass
+class c():pass
+class x( a,b):pass
+class y (b,c):pass
+class p(x,a,y,b,c):pass
+
+
+
+
+print(a.mro())
+print(b.mro())
+print(c.mro())
+print(x.mro())
+
+print(y.mro())
+print(p.mro())
+
+________________________________________________________________
+"""
+
+guess=""
+guessed=[]
+wrong=[]
+lives=5
+ans="secret"
+
+def getguess():
+    gues=input("ENTER THE ANSWER")
+    return gues
+
+
+for i in range(5):
+    guess=getguess()
+    if guess == ans:
+        print("u got it rt")
+        break
+    elif guess in guessed:
+        print("already guessed")
+    else:
+        wrong.append(guess)
+        lives-=1
+        guessed.append(guess)
+
+        print("no of chances ",lives)
+    
+
+    
+    
+if lives ==0:
+    
+    print("u hv lost")
+    
+
+
+
+
+
+
+
+"""
+guess=""
+guessed=[]
+wrong=[]
+lives=5
+ans="secret"
+x=0
+
+
+
+
+def letters(g,a):
+    gus=g
+    an=a
+    bigst = 0
+    smallst = 0
+    same_letter = 0
+    common_letters = 0
+    if len(gus) > len(an):
+        bigst = len(gus)
+        smallst = len(an)
+    elif len(gus) < len(an):
+        bigst = len(an)
+        smallst = len(gus)
+    elif len(gus) == len(an):
+        bigst = smallst = len(gus)
+
+    while x < smallst:
+            if (gus[x] == an[x]) and (gus[x] in an):
+                same_letter += 1
+                common_letters += 1
+            elif (gus[x] == an[x]):
+                same_letter += 1
+            elif (gus[x] in an):
+                common_letters += 1
+
+    
+    print("Number of positions with the same letter: ", same_letter)
+    print("Number of letters from guessed word that are also in the answer: ", common_letters)
+
+        
+def getguess():
+    gues=input("ENTER THE ANSWER")
+    return gues
+
+
+for i in range(5):      
+    guess=getguess()
+    if guess == ans:
+        print("u got it rt")
+        break
+    elif guess in guessed:
+        print("already guessed")
+    else:
+        wrong.append(guess)
+        lives-=1
+        guessed.append(guess)
+        letters(guess,ans)
+        print("no of chances ",lives)
+    
+if lives ==0:
+    
+    print("u hv lost")          .
+
+_______________________________________________________
